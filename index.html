@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eee9e2" />
+  <meta name="description" content="Maison Rouge — a more considered way to discover exceptional food." />
+  <title>Maison Rouge — Dining, Curated</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">A BETTER TABLE. A BETTER TASTE. <span>DISCOVER THE MAISON EDIT</span></div>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="Maison Rouge home">MAISON<span>ROUGE</span><i>®</i></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="#discover">Discover</a><a href="#restaurants">Restaurants</a><a href="#story">The Maison Edit</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn search-open" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button>
+      <button class="bag-btn" id="bagButton" aria-label="Open your bag">BAG <span id="bagCount">0</span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="discover">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> THE ART OF GOOD TASTE <span></span></div>
+        <h1>Good taste.<br>Beautifully <em>delivered.</em></h1>
+        <p>A considered collection of remarkable kitchens, thoughtful ingredients and dishes worth slowing down for.</p>
+        <a class="round-link" href="#restaurants"><span>Explore the collection</span><b>↗</b></a>
+        <div class="hero-foot"><span>01 — 04</span><span class="hero-line"></span><span>CURATED FOR THE CONNOISSEUR</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image"></div>
+        <div class="hero-stamp">THE<br>MAISON<br>STANDARD <b>✳</b></div>
+        <div class="image-caption"><span>FIG. 01</span><span>AN EXPERIENCE, NOT JUST A MEAL</span></div>
+      </div>
+      <div class="hero-side">INDULGE IN THE EXCEPTIONAL — EST. 2026</div>
+    </section>
+
+    <section class="intro-strip" id="story">
+      <span>01 / A NEW WAY TO DINE</span>
+      <p>Not everything deserves a place at your table.<br><em>We make sure the right things do.</em></p>
+      <span class="intro-mark">MR.</span>
+    </section>
+
+    <section class="collection section-wrap" id="restaurants">
+      <div class="section-heading">
+        <div><div class="eyebrow dark"><span></span> THE COLLECTION <span></span></div><h2>Exceptional, <em>by nature.</em></h2></div>
+        <a class="text-link" href="#menuGrid">VIEW ALL EXPERIENCES ↗</a>
+      </div>
+      <div class="toolbar">
+        <div class="filters" id="filters">
+          <button class="filter active" data-category="All">All</button>
+          <button class="filter" data-category="Fine Dining">Fine dining</button>
+          <button class="filter" data-category="Italian">Italian</button>
+          <button class="filter" data-category="Asian">Asian</button>
+          <button class="filter" data-category="Patisserie">Patisserie</button>
+        </div>
+        <label class="sort-wrap">SORT BY <select id="sortSelect"><option value="featured">Featured</option><option value="rating">Top rated</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+      <div class="collection-bottom"><span>SHOWING OUR CURRENT FAVOURITES</span><span>MORE TO BE DISCOVERED <b>↓</b></span></div>
+    </section>
+
+    <section class="editorial">
+      <div class="editorial-image"></div>
+      <div class="editorial-copy">
+        <div class="eyebrow"><span></span> THE MAISON PHILOSOPHY <span></span></div>
+        <h2>Every detail.<br>Deliberately <em>chosen.</em></h2>
+        <p>From the first ingredient to the final flourish, we believe the finest experiences are never accidental. Meet the kitchens that share our point of view.</p>
+        <a class="round-link light" href="#restaurants"><span>Discover our standard</span><b>↗</b></a>
+        <span class="editorial-number">02 / THE MAISON EDIT</span>
+      </div>
+    </section>
+
+    <section class="promise section-wrap">
+      <div class="eyebrow dark"><span></span> THE MAISON PROMISE <span></span></div>
+      <div class="promise-grid">
+        <article><b>01</b><h3>Curated kitchens</h3><p>A thoughtful selection of restaurants chosen for their craft, character and consistency.</p></article>
+        <article><b>02</b><h3>Considered quality</h3><p>We put ingredients, presentation and the little details at the heart of every choice.</p></article>
+        <article><b>03</b><h3>Made effortless</h3><p>Discover, select and place your order with clarity. No clutter, no unnecessary steps.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top"><a class="wordmark inverse" href="#">MAISON<span>ROUGE</span><i>®</i></a><p>For those who appreciate<br>the finer things.</p><a href="#discover" class="back-top">BACK TO TOP ↑</a></div>
+    <div class="footer-bottom"><span>© 2026 MAISON ROUGE. A PERSONAL PROJECT.</span><span>GOOD TASTE IS ALWAYS IN SEASON.</span><span>INDIA · MADE WITH INTENTION</span></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Your bag" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow dark">YOUR SELECTION</span><h2>The <em>bag.</em></h2></div><button class="close-btn" id="closeCart" aria-label="Close bag">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>✳</span><h3>A table awaits.</h3><p>Your bag is currently empty. Find something worth savouring.</p><button class="dark-button" id="continueShopping">EXPLORE THE COLLECTION ↗</button></div>
+    <div class="cart-footer" id="cartFooter"><div class="subtotal"><span>SUBTOTAL</span><strong id="subtotal">₹0</strong></div><p>Delivery and final charges are confirmed by the restaurant.</p><button class="checkout-button" id="placeOrder">PLACE ORDER <span>↗</span></button><small>No online payment is collected on this demo.</small></div>
+  </aside>
+
+  <div class="modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+    <button class="close-btn modal-close" id="closeOrder" aria-label="Close">×</button>
+    <span class="modal-icon">✳</span><div class="eyebrow dark">ORDER REQUEST RECEIVED</div>
+    <h2 id="orderTitle">A fine choice.</h2><p>Your demo order has been placed locally. No payment was taken and no restaurant has been contacted.</p>
+    <div class="order-reference" id="orderReference"></div><button class="dark-button" id="finishOrder">RETURN TO THE COLLECTION ↗</button>
+  </div>
+
+  <div class="search-panel" id="searchPanel"><button class="close-btn" id="closeSearch" aria-label="Close search">×</button><span class="eyebrow dark">FIND YOUR NEXT FAVOURITE</span><input id="searchInput" type="search" placeholder="Search dishes, kitchens, cuisines…" autocomplete="off"><p>TRY “TRUFFLE”, “ITALIAN” OR “DESSERT”</p></div>
+  <script src="app.js"></script>
+</body>
+</html>

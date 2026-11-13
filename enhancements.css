@@ -1,0 +1,47 @@
+/* Maison Rouge — refinement layer */
+:root{--ease-luxe:cubic-bezier(.22,.8,.25,1)}
+html{scroll-padding-top:90px}
+body{overflow-x:hidden}
+.site-header{transition:background .3s,box-shadow .3s,backdrop-filter .3s}
+.site-header.scrolled{background:rgba(238,233,226,.92);backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(35,25,22,.06)}
+.skip-link{position:fixed;top:8px;left:8px;z-index:100;background:var(--ink);color:white;padding:12px 16px;transform:translateY(-150%)}
+.skip-link:focus{transform:translateY(0)}
+.hero-copy .eyebrow,.hero h1,.hero-copy>p,.hero-copy>.round-link,.hero-foot{animation:rise-in .85s var(--ease-luxe) both}
+.hero h1{animation-delay:.1s}.hero-copy>p{animation-delay:.2s}.hero-copy>.round-link{animation-delay:.3s}.hero-foot{animation-delay:.4s}
+.hero-image{animation:hero-drift 18s ease-in-out infinite alternate;will-change:transform}
+.hero-stamp{animation:stamp-in 1s .45s var(--ease-luxe) both}
+@keyframes rise-in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes hero-drift{from{transform:scale(1)}to{transform:scale(1.075)}}
+@keyframes stamp-in{from{opacity:0;transform:rotate(0) scale(.7)}to{opacity:1;transform:rotate(12deg) scale(1)}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s var(--ease-luxe),transform .75s var(--ease-luxe)}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+.dish-card{transition:transform .35s var(--ease-luxe)}
+.dish-card:hover{transform:translateY(-5px)}
+.dish-image{transition:transform .85s var(--ease-luxe),filter .5s}
+.dish-card:hover .dish-image{filter:saturate(1)}
+.quick-add{box-shadow:0 5px 18px rgba(0,0,0,.1);transition:transform .25s,background .25s,color .25s}
+.quick-add:active{transform:scale(.88)}
+.filter{position:relative;transition:color .2s}
+.filter:after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--red);transition:right .25s}
+.filter:hover:after{right:0}
+.desktop-nav.mobile-open{display:flex;position:absolute;top:64px;left:0;right:0;margin:0;padding:22px 7%;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 18px 25px rgba(0,0,0,.07);flex-direction:column;gap:18px;z-index:10}
+.menu-toggle[aria-expanded="true"]{color:var(--red)}
+.toast{position:fixed;z-index:40;left:50%;bottom:26px;transform:translate(-50%,18px);opacity:0;pointer-events:none;background:var(--ink);color:#f4eee7;padding:13px 20px;font-size:10px;letter-spacing:.4px;box-shadow:0 10px 35px #0003;transition:opacity .25s,transform .25s;white-space:nowrap}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.no-results{grid-column:1/-1;padding:55px 10px;text-align:center;color:var(--muted);font:24px var(--serif)}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.cart-drawer{box-shadow:-20px 0 60px rgba(0,0,0,.12)}
+.modal{box-shadow:0 25px 90px rgba(0,0,0,.2)}
+@media(max-width:620px){
+ .desktop-nav.mobile-open{display:flex}
+ .hero-copy{min-height:490px}
+ .hero-visual{height:350px}
+ .dish-card{min-width:0}
+ .dish-name{line-height:1.2}
+ .dish-bottom{gap:8px;flex-wrap:wrap}
+ .footer-top{row-gap:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+ .reveal{opacity:1;transform:none}
+}
